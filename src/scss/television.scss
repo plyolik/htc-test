@@ -1,11 +1,11 @@
 
-.television {
 
+.television {
     p {
         margin: 15px 0;
     }
 
-    display: none;
+    max-height: 696px;
 }
 
 .wrap-tv {
@@ -51,4 +51,11 @@
     line-height: 24px;
     color: #333333;
 }
+
+.scroller {
+    overflow-y: scroll;
+    scrollbar-color: #BDBDBD #F2F2F2 ;
+    scrollbar-width: thin;
+    border-radius: 2px;
+  }
 

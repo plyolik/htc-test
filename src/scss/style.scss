@@ -20,6 +20,15 @@ input, button {
     cursor: pointer;
     outline: none;
     transition: .5s ease;
+    display: b
+}
+
+.display-block {
+    display: block; 
+}
+
+.display-none {
+    display: none; 
 }
 
 .entry:hover {
@@ -58,9 +67,10 @@ input, button {
 }
 
 .input-search {
-    padding: 9px 130px 2px 0px;
+    padding: 9px 0px 2px 0px;
     display: block;
     border: none;
+    width: 316px;
     border-bottom: 1px solid #333333;
 }
 
@@ -95,10 +105,9 @@ input, button {
     font-weight: 500;
     font-size: 28px;
     line-height: 33px;
-    text-align: right;
     color: #333333;
     margin: 0 12px;
-
+    cursor: pointer;
 }
 
 .activ-content {
@@ -120,5 +129,45 @@ input, button {
 
 .content {
     padding-bottom: 72px;
+}
+
+.check {
+    background: none;
+}
+
+.modal-window {
+    background: #FFFFFF;
+    border-radius: 8px;
+    text-align: center;
+    width: 304px;
+    height: 394px;
+    margin: 203px auto;
+    padding: 36px;
+}
+
+.input-registration {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #333333;
+    margin: 20px 0 2px 0;
+}
+
+.check-modal {
+    text-align: left;
+    margin-top: 20px;
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.check-modal:checked+label::before {
+    border-color: #333333;
+    background: none;
+       
+
+}
+
+.btn-modal {
+    padding-top: 108px;
 }
 

@@ -19,21 +19,17 @@ const passiveContent = document.getElementById('tele');
 
 function moviesDisplay() {
     contentMovies.classList.remove('display-none')
-    contentMovies.classList.add('display-block')
     activeContent.classList.add('tab--active')
 
     contentTelevision.classList.add('display-none')
-    contentTelevision.classList.remove('display-block')
     passiveContent.classList.remove('tab--active')
 }
 
 function televosionDisplay() {
-    contentMovies.classList.remove('display-block')
     contentMovies.classList.add('display-none')
     activeContent.classList.remove('tab--active')
 
     contentTelevision.classList.remove('display-none')
-    contentTelevision.classList.add('display-block')
     passiveContent.classList.add('tab--active')
 }
 

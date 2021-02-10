@@ -1,268 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-        <header>
+
+<head>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="container p-0">
+        <div class="row m-0">
+          <div class="m-0 p-0 col d-flex justify-content-between">
+            <div class="col">
+              <img src="./images/sign.png" alt="logo">
+              <span class="video-service">Видеосервис</span>
+            </div>
+            <div class="col m-0 p-0">
+              <form class="d-flex">
+                <input class="input-search" type="text" placeholder="Поиск..." aria-label="Search">
+                <button class="text-16 btn-search" type="submit">Найти</button>
+              </form>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <button class="entry text-16" data-bs-toggle="modal" data-bs-target="#exampleModal">Войти</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+    <div class="wrapper">
+      <div class="tabs d-flex justify-content-center">
+        <div id="video" class="tab tab--active">
+          Фильмы
+        </div>
+        <div id="tele" class="tab">
+          Телеканалы
+        </div>
+      </div>
+      <div class="content">
+        <div id="content-movies" class="display-block">
+          <div class="container movies m-0 p-0">
+            <div class="row title-category text-start">🔥 Новинки</div>
+            <div class="row mv-16 p-0 justify-content-between">
+              <div class="col poster cat">
+                <div class="blackout">
+                  <p class="review">
+                    В новом выпуске ми-ми-мишки изобретут машину сна, а Дракоша Тоша научит завязывать шнурки. Также
+                    зрители увидят новые серии мультфильмов «Четверо в кубе», «Лео и Тиг» и совершенно новый мультсериал
+                    «Снежная королева: Хранители чудес». «МУЛЬТ в кино. Выпуск 103. Некогда грустить!» — в кинотеатрах с
+                    28 сентября!
+                  </p>
+                </div>
+              </div>
+              <div class="col poster batmen">
+                <div class="blackout">
+                  <p class="review">
+                    Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
+                    на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут
+                    пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
+                  </p>
+                </div>
+              </div>
+              <div class="col poster hollywood">
+                <div class="blackout">
+                  <p class="review">
+                    Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
+                    на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут
+                    пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
+                  </p>
+                </div>
+
+              </div>
+              <div class="col poster striptease">
+                <div class="blackout">
+                  <p class="review">
+                    Танцовщицы элитного стриптиз-клуба, клиенты которого — известные финансисты с Уолл-Стрит — привыкли
+                    к большим заработкам и роскошной жизни. Но после финансового кризиса 2008 года посетителей в клубе
+                    заметно поубавилось, и деньги к девушкам уже не текут рекой. Тяжёлые времена требуют отчаянных мер,
+                    и бывшие танцовщицы решаются на авантюрный шаг.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row p-0 m-0 justify-content-between">
+              <div class="col movie-title p-0">
+                <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+              </div>
+              <div class="col movie-title p-0">
+                <p>Новый Бэтмен</p>
+              </div>
+              <div class="col movie-title p-0">
+                <p>Однажды... в Голливуде</p>
+              </div>
+              <div class="col movie-title p-0">
+                <p>Стриптизёрши</p>
+              </div>
+            </div>
+            <div class="row title-category m-0 p-0 text-start">Жанры</div>
+            <div class="row mt-16 p-0 justify-content-between">
+              <div class="col genres comedy">
+                <p class="emoji">😁</p>
+                <p class="genres-text">Комедии</p>
+              </div>
+              <div class="col genres dramas">
+                <p class="emoji">😭</p>
+                <p class="genres-text">Драмы</p>
+              </div>
+              <div class="col genres fiction">
+                <p class="emoji">👽</p>
+                <p class="genres-text">Фантастика</p>
+              </div>
+              <div class="col genres horrors">
+                <p class="emoji">👻</p>
+                <p class="genres-text">Ужасы</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="content-television" class="display-none">
+          <div class="container scroller television m-0 p-0">
             <div class="wrapper">
-                <div class="container p-0">
-                    <div class="row m-0">
-                        <div class="m-0 p-0 col d-flex justify-content-between">
-                            <div class="col"> 
-                                <img src="./images/sign.png" alt="logo">
-                                <span class="video-service">Видеосервис</span>
-                            </div>
-                            <div class="col m-0 p-0">
-                                <form class="d-flex">
-                                    <input class="input-search" type="text" placeholder="Поиск..." aria-label="Search">
-                                    <button class="text16px btn-search" type="submit">Найти</button>
-                                </form>
-                            </div>
-                            <div class="col d-flex justify-content-end">
-                                <button class="entry text16px" data-bs-toggle="modal" data-bs-target="#exampleModal">Войти</button>
-                            </div>
-                        </div>
-                    </div>
+              <div class="row channel m-0">
+                <div class="col-4 channel-icon">
+                  <img src="./images/one.png" alt="one-tv">
                 </div>
+                <div class="col-8 program-list">
+                  <div class="channel-name">Первый канал</div>
+                  <div class="row">
+                    <div class="col-1 time">
+                      <p class="program program--active">13:00</p>
+                      <p class="program">14:00</p>
+                      <p class="program">15:00</p>
+                    </div>
+                    <div class="col name-tv">
+                      <p class="program program--active">Новости (с субтитрами)</p>
+                      <p class="program">Давай поженимся</p>
+                      <p class="program">Другие новости</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row channel mt-16">
+                <div class="col-4 channel-icon">
+                  <img src="./images/2x2.png" alt="one-tv">
+                </div>
+                <div class="col-8 program-list">
+                  <div class="channel-name">2x2</div>
+                  <div class="row">
+                    <div class="col-1 time">
+                      <p class="program program--active">13:00</p>
+                      <p class="program">14:00</p>
+                      <p class="program">15:00</p>
+                    </div>
+                    <div class="col name-tv">
+                      <p class="program program--active">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+                      <p class="program">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
+                      <p class="program">БУРДАШЕВ. Сезон 1, 20 серия</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row channel mt-16">
+                <div class="col-4 channel-icon">
+                  <img src="./images/one.png" alt="one-tv">
+                </div>
+                <div class="col-8 program-list">
+                  <div class="channel-name">РБК</div>
+                  <div class="row">
+                    <div class="col-1 time">
+                      <p class="program program--active">13:00</p>
+                      <p class="program">14:00</p>
+                      <p class="program">15:00</p>
+                    </div>
+                    <div class="col name-tv">
+                      <p class="program program--active">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</p>
+                      <p class="program">ДЕНЬ. Главные темы</p>
+                      <p class="program">Главные новости</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row channel mt-16 ">
+                <div class="col-4 channel-icon">
+                  <img src="./images/amedia.png" alt="one-tv">
+                </div>
+                <div class="col-8 program-list">
+                  <div class="channel-name">AMEDIA PREMIUM</div>
+                  <div class="row">
+                    <div class="col-1 time">
+                      <p class="program program--active">13:00</p>
+                      <p class="program">14:00</p>
+                      <p class="program">15:00</p>
+                    </div>
+                    <div class="col name-tv">
+                      <p class="program program--active">Клиент всегда мёртв</p>
+                      <p class="program">Голодные игры: Сойка-пересмешница. Часть I</p>
+                      <p class="program">Секс в большом городе</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row channel mt-16">
+                <div class="col-4 channel-icon">
+                  <img src="./images/2x2.png" alt="one-tv">
+                </div>
+                <div class="col-8 program-list">
+                  <div class="channel-name">2x2</div>
+                  <div class="row">
+                    <div class="col-1 time">
+                      <p class="program program--active">13:00</p>
+                      <p class="program">14:00</p>
+                      <p class="program">15:00</p>
+                    </div>
+                    <div class="col name-tv">
+                      <p class="program program--active">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+                      <p class="program">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
+                      <p class="program">БУРДАШЕВ. Сезон 1, 20 серия</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </header>
-        <div class="main">
-            <div class="wrapper">
-                <div class="header-main d-flex justify-content-center">
-                    <div id="video" class="activ-content">
-                        Фильмы
-                    </div>
-                    <div id="tele" class="title">
-                        Телеканалы
-                    </div>
-                </div>
-                <div class="content">
-                    <div id="content-movies" class="display-block">
-                        <div class="container movies m-0 p-0">
-                            <div class="row title-category text-start">🔥 Новинки</div>
-                            <div class="row margin16px p-0">
-                                <div class="col poster left-col cat">
-                                    <div class="blackout">
-                                        <p class="review">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
-                                            на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут 
-                                            пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col poster centr-col batmen">
-                                    <div class="blackout">
-                                        <p class="review">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
-                                            на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут 
-                                            пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col poster centr-col hollywood">
-                                    <div class="blackout">
-                                        <p class="review">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
-                                            на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут 
-                                            пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="col poster right-col striptease">
-                                    <div class="blackout">
-                                        <p class="review">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
-                                            на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут 
-                                            пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row  p-0 m-0">
-                                <div class="col movie-title p-0 left-col">
-                                    <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
-                                </div>
-                                <div class="col movie-title p-0 centr-col">
-                                    <p>Новый Бэтмен</p>
-                                </div>
-                                <div class="col movie-title p-0 centr-col">
-                                    <p>Однажды... в Голливуде</p>
-                                </div>
-                                <div class="col movie-title p-0 right-col">
-                                    <p>Стриптизёрши</p>
-                                </div>
-                            </div>
-                            <div class="row title-category m-0 p-0 text-start">Жанры</div>
-                            <div class="row mt16px p-0">
-                                <div class="col left-col genres comedy">
-                                    <p class="emoji">😁</p>
-                                    <p class="genres-text">Комедии</p>
-                                </div>
-                                <div class="col centr-col genres dramas">
-                                    <p class="emoji">😭</p>
-                                    <p class="genres-text">Драмы</p>
-                                </div>
-                                <div class="col centr-col genres fiction">
-                                    <p class="emoji">👽</p>
-                                    <p class="genres-text">Фантастика</p>
-                                </div>
-                                <div class="col genres right-col horrors">
-                                    <p class="emoji">👻</p>
-                                    <p class="genres-text">Ужасы</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="content-television" class="display-none">
-                        <div class="container scroller television m-0 p-0">
-                            <div class="wrapper">
-                                <div class="row wrap-tv m-0">
-                                    <div class="col-4 icons-tv">
-                                        <img src="./images/one.png" alt="one-tv">
-                                    </div>
-                                    <div class="col-8 program-tv">
-                                        <div class="channel">Первый канал</div>
-                                        <div class="row">
-                                            <div class="col-1 time">
-                                                <p class="tv-active">13:00</p>
-                                                <p class="tv-later">14:00</p>
-                                                <p class="tv-later">15:00</p> 
-                                            </div>
-                                            <div class="col name-tv">
-                                                <p class="tv-active">Новости (с субтитрами)</p>
-                                                <p class="tv-later">Давай поженимся</p>
-                                                <p class="tv-later">Другие новости</p> 
-                                            </div>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
-                                <div class="row wrap-tv  mt16px">
-                                    <div class="col-4 icons-tv">
-                                        <img src="./images/2x2.png" alt="one-tv">
-                                    </div>
-                                    <div class="col-8 program-tv">
-                                        <div class="channel">2x2</div>
-                                        <div class="row">
-                                            <div class="col-1 time">
-                                                <p class="tv-active">13:00</p>
-                                                <p class="tv-later">14:00</p>
-                                                <p class="tv-later">15:00</p> 
-                                            </div>
-                                            <div class="col name-tv">
-                                                <p class="tv-active">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
-                                                <p class="tv-later">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
-                                                <p class="tv-later">БУРДАШЕВ. Сезон 1, 20 серия</p> 
-                                            </div>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
-                                <div class="row wrap-tv  mt16px">
-                                    <div class="col-4 icons-tv">
-                                        <img src="./images/one.png" alt="one-tv">
-                                    </div>
-                                    <div class="col-8 program-tv">
-                                        <div class="channel">РБК</div>
-                                        <div class="row">
-                                            <div class="col-1 time">
-                                                <p class="tv-active">13:00</p>
-                                                <p class="tv-later">14:00</p>
-                                                <p class="tv-later">15:00</p> 
-                                            </div>
-                                            <div class="col name-tv">
-                                                <p class="tv-active">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</p>
-                                                <p class="tv-later">ДЕНЬ. Главные темы</p>
-                                                <p class="tv-later">Главные новости</p> 
-                                            </div>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
-                                <div class="row wrap-tv mt16px ">
-                                    <div class="col-4 icons-tv">
-                                        <img src="./images/amedia.png" alt="one-tv">
-                                    </div>
-                                    <div class="col-8 program-tv">
-                                        <div class="channel">AMEDIA PREMIUM</div>
-                                        <div class="row">
-                                            <div class="col-1 time">
-                                                <p class="tv-active">13:00</p>
-                                                <p class="tv-later">14:00</p>
-                                                <p class="tv-later">15:00</p> 
-                                            </div>
-                                            <div class="col name-tv">
-                                                <p class="tv-active">Клиент всегда мёртв</p>
-                                                <p class="tv-later">Голодные игры: Сойка-пересмешница. Часть I</p>
-                                                <p class="tv-later">Секс в большом городе</p> 
-                                            </div>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
-                                <div class="row wrap-tv  mt16px">
-                                    <div class="col-4 icons-tv">
-                                        <img src="./images/2x2.png" alt="one-tv">
-                                    </div>
-                                    <div class="col-8 program-tv">
-                                        <div class="channel">2x2</div>
-                                        <div class="row">
-                                            <div class="col-1 time">
-                                                <p class="tv-active">13:00</p>
-                                                <p class="tv-later">14:00</p>
-                                                <p class="tv-later">15:00</p> 
-                                            </div>
-                                            <div class="col name-tv">
-                                                <p class="tv-active">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
-                                                <p class="tv-later">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
-                                                <p class="tv-later">БУРДАШЕВ. Сезон 1, 20 серия</p> 
-                                            </div>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    <footer>
-        <div class="wrapper">
-            <div class="container m-0 p-0">
-                <div class="row m-0 p-0">
-                    <div class="footer-img p-0 d-flex align-items-center">
-                        <img src="./images/vector.png" alt="logo">
-                    </div>
-                    <div class="col m-0 p-0">
-                        <div class="row  m-0 p-0 text-footer">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</div>
-                        <div class="row  m-0 p-0">+7 (3412) 93-88-61, 43-29-29</div>
-                        <div class="row m-0 p-0"><a class="footer-link p-0 text16px" href="http://htc-cs.ru">htc-cs.ru</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content modal-window">
-            <div class="title">Вход</div>
-            <input class="input-registration" type="text" placeholder="Логин" aria-label="Логин">
-            <input class="input-registration" type="password" placeholder="Пароль" aria-label="Пароль">
-
-            <div class="check-modal">
-                <input class="check" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">
-                Запомнить
-                </label>
-            </div>
-            <div class="btn-modal">
-                <button type="button" class="entry text16px">Войти</button>
-            </div>
-        </div>
+      </div>
     </div>
   </div>
-    </footer>
-  </body>
+
+  <footer>
+    <div class="wrapper">
+      <div class="container m-0 p-0">
+        <div class="row m-0 p-0">
+          <div class="footer-img p-0 d-flex align-items-center">
+            <img src="./images/vector.png" alt="logo">
+          </div>
+          <div class="col m-0 p-0">
+            <div class="row m-0 p-0 footer-text">
+              426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</div>
+            <div class="row m-0 p-0">+7 (3412) 93-88-61, 43-29-29</div>
+            <div class="row m-0 p-0"><a class="footer-link p-0 text-16" href="http://htc-cs.ru">htc-cs.ru</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modal-window">
+        <div class="title">Вход</div>
+        <input class="input-registration" type="text" placeholder="Логин" aria-label="Логин">
+        <input class="input-registration" type="password" placeholder="Пароль" aria-label="Пароль">
+
+        <div class="checkbox">
+          <input class="checkbox-field" type="checkbox" value="" id="flexCheckChecked">
+          <label class="form-check-label" for="flexCheckChecked">
+            Запомнить
+          </label>
+        </div>
+        
+        <div class="btn-modal">
+          <button type="button" class="entry text-16">Войти</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

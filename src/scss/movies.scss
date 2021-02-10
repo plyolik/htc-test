@@ -1,163 +1,141 @@
-
 .title-category {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: right;
-    color: #333333;
-    margin: 5px 0 0 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  color: #333333;
+  margin: 5px 0 0 0px;
 }
 
 .genres {
-    background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
-    opacity: 0.8;
-    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 6px;
-    height: 208px;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 0;
+  opacity: 0.8;
+  box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  height: 208px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0;
+  max-width: 280px;
 }
- 
+
 .genres:hover {
-    opacity: 1;
-    transition: .3s ease;
-    cursor: pointer;
-
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.comedy { 
-    background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
-    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
-    opacity: 0.8;
-    transition: all 0.3s ease-in-out;
+.comedy {
+  background: linear-gradient(127.83deg, #f2c94c 8.44%, #f29a4a 91.36%);
 }
+
 .dramas {
-    background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
-    opacity: 0.8;
-    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(127.83deg, #f2994a 8.44%, #eb5757 91.36%);
 }
+
 .fiction {
-    background: linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);
-    opacity: 0.8;
-    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(127.83deg, #56ccf2 8.44%, #2f80ed 91.36%);
 }
+
 .horrors {
-    background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
-    opacity: 0.8;
-    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
 }
 
 .emoji {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 57px;
-    margin-top: 77px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57px;
+  margin-top: 77px;
 }
 
 .genres-text {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    margin-top: 26px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 26px;
 }
 
-.margin16px {
-    margin: 16px 0;
+.mv-16 {
+  margin: 16px 0;
 }
 
-.mt16px {
-    margin: 16px 0 0 0; 
+.mt-16 {
+  margin: 16px 0 0 0;
 }
 
 .poster {
-    height: 370px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 0 10px;
-    padding: 0;
-    position: relative;
-}
-
-.hollywood {
-    background-image: url(../images/posters/hollywood.png);
+  max-width: 280px;
+  height: 370px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
 }
 
 .blackout {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: rgba(51,51,51, 0.8);
-    color: #333333;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #333333;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
 
-}
-
-.blackout p {
+  p {
     transition: all 0.3s ease-in-out;
     margin-top: -15px;
   }
-  .poster:hover .blackout {
-    opacity: 1;
-  }
-  .poster:hover .blackout p {
+}
+
+.poster:hover .blackout {
+  opacity: 1;
+
+  p {
     margin-top: 0;
   }
-
+}
 
 .review {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 140%;
-    color: #F2F2F2;
-    padding: 16px;
-    position: absolute;
-    top: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  color: #f2f2f2;
+  padding: 16px;
+  position: absolute;
+  top: 0;
+}
+
+.hollywood {
+  background-image: url(../images/posters/hollywood.png);
 }
 
 .striptease {
-    background-image: url(../images/posters/striptease.png);
+  background-image: url(../images/posters/striptease.png);
 }
 
 .batmen {
-    background-image: url(../images/posters/batmen.png);
+  background-image: url(../images/posters/batmen.png);
 }
 
 .cat {
-    background-image: url(../images/posters/cat.png);
-}
-
-.centr-col {
-    width: 280px;
-    margin: 0 10px;
-}
-
-.left-col{
-    margin: 0 10px 0 0;
-    width: 280px;
-}
-
-.right-col {
-    margin: 0 0 0 10px;
-    width: 280px;
+  background-image: url(../images/posters/cat.png);
 }
 
 .movie-title {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 24px;
-    color: #333333;
-    margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 16px;
+  max-width: 280px;
 }

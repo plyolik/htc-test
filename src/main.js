@@ -1,8 +1,7 @@
 import './scss/style.scss'
-import 'bootstrap' 
+import 'bootstrap'
 import './images/logo/sign.png'
 import './images/logo/vector.png'
-import './images/icons/cursor-hand.png'
 import './images/posters/hollywood.png'
 import './images/posters/batmen.png'
 import './images/posters/cat.png'
@@ -19,35 +18,29 @@ const activeContent = document.getElementById('video');
 const passiveContent = document.getElementById('tele');
 
 function moviesDisplay() {
-    
     contentMovies.classList.remove('display-none')
     contentMovies.classList.add('display-block')
-    activeContent.classList.remove('title')
-    activeContent.classList.add('activ-content')
+    activeContent.classList.add('tab--active')
 
     contentTelevision.classList.add('display-none')
     contentTelevision.classList.remove('display-block')
-    passiveContent.classList.add('title')
-    passiveContent.classList.remove('activ-content')
+    passiveContent.classList.remove('tab--active')
 }
 
 function televosionDisplay() {
     contentMovies.classList.remove('display-block')
     contentMovies.classList.add('display-none')
-    activeContent.classList.remove('activ-content')
-    activeContent.classList.add('title')
+    activeContent.classList.remove('tab--active')
 
     contentTelevision.classList.remove('display-none')
     contentTelevision.classList.add('display-block')
-    passiveContent.classList.remove('title')
-    passiveContent.classList.add('activ-content')
+    passiveContent.classList.add('tab--active')
 }
 
-activeContent.addEventListener('click',  () => {
-     moviesDisplay()
+activeContent.addEventListener('click', () => {
+    moviesDisplay()
 })
 
-passiveContent.addEventListener('click', ()=> {
-    televosionDisplay() 
+passiveContent.addEventListener('click', () => {
+    televosionDisplay()
 })
-

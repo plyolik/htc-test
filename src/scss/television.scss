@@ -1,61 +1,64 @@
-
-
 .television {
-    p {
-        margin: 15px 0;
-    }
+  max-height: 696px;
 
-    max-height: 696px;
+  p {
+    margin: 15px 0;
+  }
 }
 
-.wrap-tv {
-    background-color: #F2F2F2;
-    border-radius: 8px;
-    padding: 19px 0 2px 0;
-}
+.channel {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 19px 0 2px 0;
 
-.tv-active {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: #E5261E;
-}
-
-.tv-later {
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: #333333;
-}
-
-.program-tv {
-    padding-left: 7px;
-}
-
-.icons-tv {
+  &-icon {
     align-items: center;
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
+  }
 
-
-}
-
-.channel {
+  &-name {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     color: #333333;
+  }
+}
+
+.program {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+
+  &-list {
+    padding-left: 7px;
+  }
+
+  &--active {
+    color: #e5261e;
+  }
 }
 
 .scroller {
-    overflow-y: scroll;
-    scrollbar-color: #BDBDBD #F2F2F2 ;
-    scrollbar-width: thin;
-    border-radius: 2px;
-  }
+  overflow-y: scroll;
+  scrollbar-color: #bdbdbd #f2f2f2;
+  scrollbar-width: thin;
+  border-radius: 2px;
+}
 
+.scroller::-webkit-scrollbar {
+  width: 20px;
+}
+
+.scroller::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  outline: 1px solid slategray;
+}

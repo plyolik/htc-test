@@ -26,7 +26,7 @@
               </form>
             </div>
             <div class="col d-flex justify-content-end">
-              <button class="entry text-16" data-bs-toggle="modal" data-bs-target="#exampleModal">Войти</button>
+              <button id="open-modal" class="entry text-16">Войти</button>
             </div>
           </div>
         </div>
@@ -46,78 +46,83 @@
       </div>
       <div class="content">
         <div id="content-movies">
-          <div class="container movies m-0 p-0">
+          <div class="container movies m-lg-0 p-0">
             <div class="row title-category text-start">🔥 Новинки</div>
             <div class="row mv-16 p-0 justify-content-between">
-              <div class="col poster cat">
-                <div class="blackout">
-                  <p class="review">
-                    В новом выпуске ми-ми-мишки изобретут машину сна, а Дракоша Тоша научит завязывать шнурки. Также
-                    зрители увидят новые серии мультфильмов «Четверо в кубе», «Лео и Тиг» и совершенно новый мультсериал
-                    «Снежная королева: Хранители чудес». «МУЛЬТ в кино. Выпуск 103. Некогда грустить!» — в кинотеатрах с
-                    28 сентября!
-                  </p>
+              <div class="col-12 col-sm-6 col-lg">
+                <div class="poster cat">
+                  <div class="blackout">
+                    <p class="review">
+                      В новом выпуске ми-ми-мишки изобретут машину сна, а Дракоша Тоша научит завязывать шнурки. Также
+                      зрители увидят новые серии мультфильмов «Четверо в кубе», «Лео и Тиг» и совершенно новый мультсериал
+                      «Снежная королева: Хранители чудес». «МУЛЬТ в кино. Выпуск 103. Некогда грустить!» — в кинотеатрах с
+                      28 сентября!
+                    </p>
+                  </div>
+                </div>
+                <div class="movie-title p-0">
+                  <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
                 </div>
               </div>
-              <div class="col poster batmen">
-                <div class="blackout">
-                  <p class="review">
-                    Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
-                    на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут
-                    пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
-                  </p>
+              <div class="col-12 col-sm-6 col-lg">
+                <div class="poster batmen">
+                  <div class="blackout">
+                    <p class="review">
+                      Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
+                      на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут
+                      пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
+                    </p>
+                  </div>
+                </div>
+                <div class="movie-title p-0">
+                  <p>Новый Бэтмен</p>
                 </div>
               </div>
-              <div class="col poster hollywood">
-                <div class="blackout">
-                  <p class="review">
-                    Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
-                    на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут
-                    пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
-                  </p>
+              <div class="col-12 col-sm-6 col-lg">
+                <div class="poster hollywood">
+                  <div class="blackout">
+                    <p class="review">
+                      Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
+                      на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут
+                      пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
+                    </p>
+                  </div>
                 </div>
-
-              </div>
-              <div class="col poster striptease">
-                <div class="blackout">
-                  <p class="review">
-                    Танцовщицы элитного стриптиз-клуба, клиенты которого — известные финансисты с Уолл-Стрит — привыкли
-                    к большим заработкам и роскошной жизни. Но после финансового кризиса 2008 года посетителей в клубе
-                    заметно поубавилось, и деньги к девушкам уже не текут рекой. Тяжёлые времена требуют отчаянных мер,
-                    и бывшие танцовщицы решаются на авантюрный шаг.
-                  </p>
+                <div class="movie-title p-0">
+                  <p>Однажды... в Голливуде</p>
                 </div>
               </div>
-            </div>
-            <div class="row p-0 m-0 justify-content-between">
-              <div class="col movie-title p-0">
-                <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
-              </div>
-              <div class="col movie-title p-0">
-                <p>Новый Бэтмен</p>
-              </div>
-              <div class="col movie-title p-0">
-                <p>Однажды... в Голливуде</p>
-              </div>
-              <div class="col movie-title p-0">
-                <p>Стриптизёрши</p>
+              <div class="col-12 col-sm-6 col-lg">
+                <div class="poster striptease">
+                  <div class="blackout">
+                    <p class="review">
+                      Танцовщицы элитного стриптиз-клуба, клиенты которого — известные финансисты с Уолл-Стрит — привыкли
+                      к большим заработкам и роскошной жизни. Но после финансового кризиса 2008 года посетителей в клубе
+                      заметно поубавилось, и деньги к девушкам уже не текут рекой. Тяжёлые времена требуют отчаянных мер,
+                      и бывшие танцовщицы решаются на авантюрный шаг.
+                    </p>
+                  </div>
+                </div>
+                <div class="movie-title p-0">
+                  <p>Стриптизёрши</p>
+                </div>
               </div>
             </div>
             <div class="row title-category m-0 p-0 text-start">Жанры</div>
             <div class="row mt-16 p-0 justify-content-between">
-              <div class="col genres comedy">
+              <div class="col-12 col-sm-6 col-lg genres comedy">
                 <p class="emoji">😁</p>
                 <p class="genres-text">Комедии</p>
               </div>
-              <div class="col genres dramas">
+              <div class="col-12 col-sm-6 col-lg genres dramas">
                 <p class="emoji">😭</p>
                 <p class="genres-text">Драмы</p>
               </div>
-              <div class="col genres fiction">
+              <div class="col-12 col-sm-6 col-lg genres fiction">
                 <p class="emoji">👽</p>
                 <p class="genres-text">Фантастика</p>
               </div>
-              <div class="col genres horrors">
+              <div class="col-12 col-sm-6 col-lg genres horrors">
                 <p class="emoji">👻</p>
                 <p class="genres-text">Ужасы</p>
               </div>
@@ -129,13 +134,13 @@
           <div class="container scroller television m-0">
             <div>
               <div class="row channel m-0">
-                <div class="col-4 channel-icon">
+                <div class="col-12 col-md-4 channel-icon">
                   <img src="./images/one.png" alt="one-tv">
                 </div>
-                <div class="col-8 program-list">
+                <div class="col-12 col-md-8 program-list">
                   <div class="channel-name">Первый канал</div>
                   <div class="row">
-                    <div class="col-1 time">
+                    <div class="col-3 col-md-1 time">
                       <p class="program program--active">13:00</p>
                       <p class="program">14:00</p>
                       <p class="program">15:00</p>
@@ -149,13 +154,13 @@
                 </div>
               </div>
               <div class="row channel mt-16">
-                <div class="col-4 channel-icon">
-                  <img src="./images/2x2.png" alt="one-tv">
+                <div class="col-12 col-md-4 channel-icon">
+                  <img src="./images/2x2.png" alt="2x2-tv">
                 </div>
-                <div class="col-8 program-list">
+                <div class="col-12 col-md-8 program-list">
                   <div class="channel-name">2x2</div>
                   <div class="row">
-                    <div class="col-1 time">
+                    <div class="col-3 col-md-1 time">
                       <p class="program program--active">13:00</p>
                       <p class="program">14:00</p>
                       <p class="program">15:00</p>
@@ -169,13 +174,13 @@
                 </div>
               </div>
               <div class="row channel mt-16">
-                <div class="col-4 channel-icon">
-                  <img src="./images/one.png" alt="one-tv">
+                <div class="col-12 col-md-4 channel-icon">
+                  <img src="./images/rbc.png" alt="rbc-tv">
                 </div>
-                <div class="col-8 program-list">
+                <div class="col-12 col-md-8 program-list">
                   <div class="channel-name">РБК</div>
                   <div class="row">
-                    <div class="col-1 time">
+                    <div class="col-3 col-md-1 time">
                       <p class="program program--active">13:00</p>
                       <p class="program">14:00</p>
                       <p class="program">15:00</p>
@@ -189,13 +194,13 @@
                 </div>
               </div>
               <div class="row channel mt-16 ">
-                <div class="col-4 channel-icon">
-                  <img src="./images/amedia.png" alt="one-tv">
+                <div class="col-12 col-md-4 channel-icon">
+                  <img src="./images/amedia.png" alt="amedia-tv">
                 </div>
-                <div class="col-8 program-list">
+                <div class="col-12 col-md-8 program-list">
                   <div class="channel-name">AMEDIA PREMIUM</div>
                   <div class="row">
-                    <div class="col-1 time">
+                    <div class="col-3 col-md-1 time">
                       <p class="program program--active">13:00</p>
                       <p class="program">14:00</p>
                       <p class="program">15:00</p>
@@ -209,13 +214,13 @@
                 </div>
               </div>
               <div class="row channel mt-16">
-                <div class="col-4 channel-icon">
-                  <img src="./images/2x2.png" alt="one-tv">
+                <div class="col-12 col-md-4 channel-icon">
+                  <img src="./images/2x2.png" alt="2x2-tv">
                 </div>
-                <div class="col-8 program-list">
+                <div class="col-12 col-md-8 program-list">
                   <div class="channel-name">2x2</div>
                   <div class="row">
-                    <div class="col-1 time">
+                    <div class="col-3 col-md-1 time">
                       <p class="program program--active">13:00</p>
                       <p class="program">14:00</p>
                       <p class="program">15:00</p>
@@ -257,7 +262,7 @@
     <div class="modal-dialog">
       <div class="modal-content modal-window">
         <div class="title">Вход</div>
-        <input class="input-registration" type="text" placeholder="Логин" aria-label="Логин">
+        <input class="input-registration" id="login-field" type="text" placeholder="Логин" aria-label="Логин">
         <input class="input-registration" type="password" placeholder="Пароль" aria-label="Пароль">
 
         <div class="checkbox">

@@ -45,20 +45,42 @@
 
 .scroller {
   overflow-y: scroll;
-  scrollbar-color: #bdbdbd #f2f2f2;
-  scrollbar-width: thin;
-  border-radius: 2px;
+  width: 1196px;
+  padding: 0 8px 0 0;
+
+
+
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 8px;
+    border: 8px solid rgba(255, 255, 255, 0);
+  }
+  
+  &::-webkit-scrollbar-track-piece {
+    background: #F2F2F2;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #F2F2F2;
+    border-radius: 8px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #BDBDBD;
+    border-radius: 2px;
+    border: 2px solid rgb(242,242,242);
+  }
 }
 
-.scroller::-webkit-scrollbar {
-  width: 20px;
-}
 
-.scroller::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
 
-.scroller::-webkit-scrollbar-thumb {
-  background-color: darkgray;
-  outline: 1px solid slategray;
-}
+
+// ::-webkit-scrollbar              { /* 1 - скроллбар */ }
+// ::-webkit-scrollbar-button       { /* 2 - кнопка */ }
+// ::-webkit-scrollbar-track        { /* 3 - трек */ }
+// ::-webkit-scrollbar-track-piece  { /* 4 - видимая часть трека */ }
+// ::-webkit-scrollbar-thumb        { /* 5 - ползунок */ }
+// ::-webkit-scrollbar-corner       { /* 6 - уголок */ }
+// ::-webkit-resizer                { /* 7 - изменение размеров окна*/ }

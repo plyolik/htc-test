@@ -12,31 +12,31 @@ import './images/icons/amedia.png'
 import './images/icons/fill1.png'
 import './images/icons/fill2.png'
 
-const contentMovies = document.getElementById('content-movies');
-const contentTelevision = document.getElementById('content-television');
-const activeContent = document.getElementById('video');
-const passiveContent = document.getElementById('tele');
 
-function moviesDisplay() {
-    contentMovies.classList.remove('display-none')
-    activeContent.classList.add('tab--active')
+const tabs = Array.from(document.querySelectorAll('.tab'));
+const contents = Array.from(document.querySelector('.content').children)
 
-    contentTelevision.classList.add('display-none')
-    passiveContent.classList.remove('tab--active')
+function disableTabs() {
+    tabs.forEach((tab) => {
+        tab.classList.remove('tab--active')
+    })
 }
 
-function televosionDisplay() {
-    contentMovies.classList.add('display-none')
-    activeContent.classList.remove('tab--active')
-
-    contentTelevision.classList.remove('display-none')
-    passiveContent.classList.add('tab--active')
+function hideContents() {
+    contents.forEach((content) => {
+        content.classList.add('display-none')
+    })
 }
 
-activeContent.addEventListener('click', () => {
-    moviesDisplay()
-})
+function init() {
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', ()=> {
+            disableTabs()
+            hideContents()
+            tab.classList.add('.tab--active')
+            contents[tabs.indexOf(tab)].classList.remove('display-none')
+        })
+    })
+}
 
-passiveContent.addEventListener('click', () => {
-    televosionDisplay()
-})
+init()

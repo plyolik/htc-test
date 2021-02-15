@@ -21,15 +21,28 @@ const modal = new Modal(document.querySelector('#exampleModal'))
 
 const loginBtn = document.querySelector('.btn-modal > button')
 const loginInput = document.querySelector('#login-field')
+const name = document.querySelector('.username')
 
 function login() {
     const str = loginInput.value
     if (!str) {
-        alert('error')
+        alert('Имя пользователя не может быть пустым')
         return
     }
     localStorage.setItem('username', str)
     modal.toggle()
+    loginInput.value = ''
+    name.value = localStorage.getItem('username')
+    toggleLoginBtn()
+}
+
+function changeUsername() {
+    const str = name.value
+    if (!str) {
+        name.value = localStorage.getItem('username')
+        return
+    }
+    localStorage.setItem('username', str)
 }
 
 function disableTabs() {
@@ -44,7 +57,20 @@ function hideContents() {
     })
 }
 
+function toggleLoginBtn() {
+    openModalBtn.classList.toggle('entry')
+    openModalBtn.classList.toggle('btn-search')
+    openModalBtn.textContent = openModalBtn.textContent === 'Выйти' ? 'Войти' : 'Выйти'
+    name.classList.toggle('display-none')
+}
+
 function init() {
+    const str = localStorage.getItem('username')
+    if(str) {
+        name.value = str
+        toggleLoginBtn()
+    } 
+
     tabs.forEach((tab) => {
         tab.addEventListener('click', ()=> {
             disableTabs()
@@ -55,12 +81,28 @@ function init() {
     })
 
     openModalBtn.addEventListener('click', () => {
-        modal.show()
+        const str = localStorage.getItem('username')
+        if (str) {
+            toggleLoginBtn()
+            name.value = ''
+            localStorage.removeItem('username')
+        } else {
+            modal.show()
+        }
     })
 
     loginBtn.addEventListener('click', e => {
         e.preventDefault();
         login()
+    })
+
+    name.addEventListener('blur', changeUsername)
+    name.addEventListener('keydown', (e) => {
+        if (e.keyCode === 13) {
+            console.log('a')
+            e.preventDefault()
+            name.blur()
+        }
     })
 }
 

@@ -43,13 +43,16 @@
   }
 }
 
+@media (min-width: 768px) {
+  .scroller {
+    width: 1196px;
+  }
+}
+
 .scroller {
   overflow-y: scroll;
   max-width: 1196px;
   padding: 0 8px 0 0;
-
-
-
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -73,14 +76,3 @@
     border: 2px solid rgb(242,242,242);
   }
 }
-
-
-
-
-// ::-webkit-scrollbar              { /* 1 - скроллбар */ }
-// ::-webkit-scrollbar-button       { /* 2 - кнопка */ }
-// ::-webkit-scrollbar-track        { /* 3 - трек */ }
-// ::-webkit-scrollbar-track-piece  { /* 4 - видимая часть трека */ }
-// ::-webkit-scrollbar-thumb        { /* 5 - ползунок */ }
-// ::-webkit-scrollbar-corner       { /* 6 - уголок */ }
-// ::-webkit-resizer                { /* 7 - изменение размеров окна*/ }

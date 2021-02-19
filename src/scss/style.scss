@@ -66,9 +66,11 @@ button {
   padding: 9px 0px 2px 0px;
   display: block;
   border: none;
-  width: 316px;
   border-bottom: 1px solid #333333;
   margin-right: 31px;
+  min-width: 100px;
+  max-width: 316px;
+  width: 100%;
 }
 
 .btn-search {
@@ -79,13 +81,17 @@ button {
 }
 
 .footer {
-  &-text {
+  &-address {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     color: #333333;
     margin-bottom: 4px;
+  }
+
+  &-content {
+    margin-left: 39px;
   }
 
   &-link {
@@ -173,7 +179,20 @@ button {
   font-size: 16px;
   line-height: 19px;
   color: #333333;
-  padding-top: 11px;
-  padding-right: 17px;
   text-align: right;
+  min-width: 100px;
+  max-width: 350px;
+  padding: 7px 17px 0 0;
+}
+
+@media (min-width: 992px) {
+  .username {
+    padding: 7px 17px 0;
+  }
+
+  .footer-img {
+    // width: 32px;
+    // height: 64px;
+    // padding: 14px 84px 3px 0;
+  }
 }

@@ -53,7 +53,7 @@ function disableTabs() {
 
 function hideContents() {
     contents.forEach((content) => {
-        content.classList.add('display-none')
+        content.classList.add('d-none')
     })
 }
 
@@ -61,7 +61,7 @@ function toggleLoginBtn() {
     openModalBtn.classList.toggle('entry')
     openModalBtn.classList.toggle('btn-search')
     openModalBtn.textContent = openModalBtn.textContent === 'Выйти' ? 'Войти' : 'Выйти'
-    name.classList.toggle('display-none')
+    name.classList.toggle('d-none')
 }
 
 function init() {
@@ -76,7 +76,7 @@ function init() {
             disableTabs()
             hideContents()
             tab.classList.add('tab--active')
-            contents[tabs.indexOf(tab)].classList.remove('display-none')
+            contents[tabs.indexOf(tab)].classList.remove('d-none')
         })
     })
 

@@ -43,12 +43,6 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .scroller {
-    width: 1196px;
-  }
-}
-
 .scroller {
   overflow-y: scroll;
   max-width: 1196px;
@@ -74,5 +68,11 @@
     background: #BDBDBD;
     border-radius: 2px;
     border: 2px solid rgb(242,242,242);
+  }
+}
+
+@media (min-width: 1200px) {
+  .scroller {
+    width: 1196px;
   }
 }

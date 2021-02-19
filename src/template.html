@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
+  <meta charset="UTF-8">
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -10,15 +11,15 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
-  <header>
+<body class="body">
+  <header class="header">
     <div class="wrapper">
       <div class="container p-0">
         <div class="row m-0 m-lg-0 p-lg-0 d-flex justify-content-between">
-          <div class="col-12 col-lg d-flex justify-content-center justify-content-lg-start align-items-center p-0">
+          <a href="/" class="col-12 link col-lg d-flex justify-content-center justify-content-lg-start align-items-center p-0">
             <img src="./images/sign.png" alt="logo">
             <span class="video-service">Видеосервис</span>
-          </div>
+          </a>
           <div class="col col-lg m-2 m-lg-0 p-lg-0 p-0">
             <form class="d-flex justify-content-center justify-content-lg-start">
               <input class="input-search" type="text" placeholder="Поиск..." aria-label="Search">
@@ -34,21 +35,22 @@
     </div>
   </header>
 
-  <div class="main">
+  <main>
     <div class="wrapper">
-      <div class="tabs d-flex justify-content-center">
-        <div id="video" class="tab tab--active">
+      <section class="tabs d-flex justify-content-center">
+        <button id="video" class="tab tab--active">
           Фильмы
-        </div>
-        <div id="tele" class="tab">
+        </button>
+        <button id="tele" class="tab">
           Телеканалы
-        </div>
-      </div>
-      <div class="content">
-        <div id="content-movies" class="d-flex justify-content-center">
+        </button>
+      </section>
+      <section class="content">
+        <section id="content-movies" class="d-flex justify-content-center">
           <div class="container movies m-lg-0 p-0">
-            <div class="row title-category justify-content-center justify-content-lg-start mx-md-2 mx-xl-0">🔥 Новинки
-            </div>
+            <a href="#" class="row link title-category justify-content-center justify-content-lg-start mx-md-2 mx-xl-0">
+              🔥 Новинки
+            </a>
             <div class="row mv-16 p-0 justify-content-center justify-content-lg-between">
               <div class="col-12 col-md-6 col-lg mx-md-2 mt-2 m-xl-0 p-0 mw280">
                 <div class="poster cat">
@@ -113,8 +115,9 @@
                 </div>
               </div>
             </div>
-            <div class="row title-category m-0 p-0 justify-content-center justify-content-lg-start mx-md-2 mx-xl-0">
-              Жанры</div>
+            <a href="#" class="row link title-category m-0 p-0 justify-content-center justify-content-lg-start mx-md-2 mx-xl-0">
+              Жанры
+            </a>
             <div class="row mt-16 p-0 justify-content-center justify-content-lg-between">
               <div class="col-12 col-md-6 mx-md-2 mt-2 m-xl-0 col-lg genres comedy">
                 <p class="emoji">😁</p>
@@ -134,9 +137,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div id="content-television" class="d-none">
+        <section id="content-television" class="d-none">
           <div class="container scroller television m-0">
             <div>
               <div class="row channel m-0">
@@ -241,28 +244,34 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </div>
-  </div>
+  </main>
 
-  <footer>
+  <footer class="footer">
     <div class="wrapper">
       <div class="d-flex justify-content-around justify-content-lg-start">
         <div class="m-2 mx-lg-0 footer-img d-flex align-items-center">
           <img src="./images/vector.png" alt="logo">
         </div>
         <div class="footer-content">
-          <div class="footer-address">
-            426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</div>
-          <div>+7 (3412) 93-88-61, 43-29-29</div>
-          <a class="footer-link d-block text-16" href="http://htc-cs.ru">htc-cs.ru</a>
+          <address class="address">
+            <a class="footer-address link" href="https://goo.gl/maps/XYzbyoX12SguLRhQA" target="_blank">
+              426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)
+            </a>
+          </address>
+          <div>
+            <a class="footer-address link" href="tel:+73412938861">+7 (3412) 93-88-61,</a>
+            <a class="footer-address link" href="tel:432929">43-29-29</a>
+          </div>
+          <a class="footer-link link d-block text-16" target="_blank" href="http://htc-cs.ru">htc-cs.ru</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content modal-window">
         <div class="title">Вход</div>

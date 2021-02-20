@@ -11,7 +11,9 @@ import './images/icons/one.png'
 import './images/icons/2x2.png'
 import './images/icons/amedia.png'
 import './images/icons/rbc.png'
+import { Scrollbar } from './js/scrollbar'
 
+document.addEventListener('DOMContentLoaded', Scrollbar.iniitialize('.scrollbar'))
 
 const tabs = Array.from(document.querySelectorAll('.tab'));
 const contents = Array.from(document.querySelector('.content').children)

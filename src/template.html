@@ -273,10 +273,10 @@
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content modal-window">
+      <form class="modal-content modal-window">
         <div class="title">Вход</div>
         <input class="input-registration" id="login-field" type="text" placeholder="Логин" aria-label="Логин">
-        <input class="input-registration" type="password" placeholder="Пароль" aria-label="Пароль">
+        <input class="input-registration" id="password-field" type="password" placeholder="Пароль" aria-label="Пароль">
 
         <div class="checkbox custom-checkbox">
           <input type="checkbox" id="remember-checkbox">
@@ -284,9 +284,9 @@
         </div>
 
         <div class="btn-modal">
-          <button type="button" class="entry text-16">Войти</button>
+          <button class="entry text-16" type="submit">Войти</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </body>

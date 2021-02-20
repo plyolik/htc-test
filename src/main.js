@@ -20,29 +20,59 @@ const openModalBtn = document.querySelector('#open-modal')
 const modal = new Modal(document.querySelector('#exampleModal'))
 
 const loginBtn = document.querySelector('.btn-modal > button')
-const loginInput = document.querySelector('#login-field')
+const loginField = document.querySelector('#login-field')
+const passwordField = document.querySelector('#password-field')
 const name = document.querySelector('.username')
 
-function login() {
-    const str = loginInput.value
-    if (!str) {
+const regExp = new RegExp(/^(?=[a-zA-Zа-яА-Я0-9._\s\.]{8,20}$)/)
+
+function validateUsername(username) {
+    if (!username) {
         alert('Имя пользователя не может быть пустым')
+        return false
+    }
+    if (!regExp.test(username)) {
+        alert('Некорректное имя пользовтеля')
+        return false
+    }
+    return true
+}
+
+function validatePassword(password) {
+    if (!password) {
+        alert('Пароль не может быть пустым')
+        return false
+    }
+    if (!regExp.test(password)) {
+        alert('Некорректный пароль')
+        return false
+    }
+    return true
+}
+
+function login() {
+    const username = loginField.value.trim()
+    const password = passwordField.value.trim()
+
+    if (!validateUsername(username) || !validatePassword(password)) {
         return
     }
-    localStorage.setItem('username', str)
+
+    localStorage.setItem('username', username)
     modal.toggle()
-    loginInput.value = ''
+    loginField.value = ''
+    passwordField.value = ''
     name.value = localStorage.getItem('username')
     toggleLoginBtn()
 }
 
 function changeUsername() {
-    const str = name.value
-    if (!str) {
+    const username = name.value
+    if (!validateUsername(username)) {
         name.value = localStorage.getItem('username')
         return
     }
-    localStorage.setItem('username', str)
+    localStorage.setItem('username', username)
 }
 
 function disableTabs() {
@@ -65,14 +95,14 @@ function toggleLoginBtn() {
 }
 
 function init() {
-    const str = localStorage.getItem('username')
-    if(str) {
-        name.value = str
+    const username = localStorage.getItem('username')
+    if (username) {
+        name.value = username
         toggleLoginBtn()
-    } 
+    }
 
     tabs.forEach((tab) => {
-        tab.addEventListener('click', ()=> {
+        tab.addEventListener('click', () => {
             disableTabs()
             hideContents()
             tab.classList.add('tab--active')
@@ -81,8 +111,8 @@ function init() {
     })
 
     openModalBtn.addEventListener('click', () => {
-        const str = localStorage.getItem('username')
-        if (str) {
+        const username = localStorage.getItem('username')
+        if (username) {
             toggleLoginBtn()
             name.value = ''
             localStorage.removeItem('username')

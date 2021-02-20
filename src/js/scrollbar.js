@@ -1,9 +1,9 @@
 export class Scrollbar {
     static iniitialize(selector) {
-        const container = document.querySelector(selector)
+        const container = document.querySelector(selector);
         if (!container) {
-            console.error(`Cannot find element ${container}`)
-            return
+            console.error(`Cannot find element ${container}`);
+            return;
         }
 
         Object.defineProperty(container, 'data-scrollbar', { value: new Scrollbar(container), configurable: true });
@@ -13,12 +13,12 @@ export class Scrollbar {
         this.target = contaier;
         this.content = contaier.firstElementChild;
 
-        this.bar = document.createElement('div')
-        this.bar.className = 'scrollbar-scroller'
+        this.bar = document.createElement('div');
+        this.bar.className = 'scrollbar-scroller';
 
-        this.barContainer = document.createElement('div')
-        this.barContainer.className = 'scrollbar-scroller-wrapper'
-        this.barContainer.appendChild(this.bar)
+        this.barContainer = document.createElement('div');
+        this.barContainer.className = 'scrollbar-scroller-wrapper';
+        this.barContainer.appendChild(this.bar);
 
         this.mB = this.moveBar.bind(this);
 
@@ -87,7 +87,7 @@ export class Scrollbar {
     moveBar(e) {
         const raf = window.requestAnimationFrame || window.setImmediate || ((c) => setTimeout(c, 0));
         var totalHeight = this.el.scrollHeight,
-            ownHeight = this.el.clientHeight
+            ownHeight = this.el.clientHeight;
 
         this.scrollRatio = ownHeight / totalHeight;
 
@@ -95,12 +95,12 @@ export class Scrollbar {
 
         raf(() => {
             if (this.scrollRatio >= 1) {
-                this.bar.classList.add('scrollbar--hidden')
-                this.barContainer.classList.add('scrollbar--hidden')
+                this.bar.classList.add('scrollbar--hidden');
+                this.barContainer.classList.add('scrollbar--hidden');
             } else {
-                this.bar.classList.remove('scrollbar--hidden')
-                this.barContainer.classList.remove('scrollbar--hidden')
-                this.barContainer.style.cssText = `height: 100%; right: ${right}px;`
+                this.bar.classList.remove('scrollbar--hidden');
+                this.barContainer.classList.remove('scrollbar--hidden');
+                this.barContainer.style.cssText = `height: 100%; right: ${right}px;`;
                 this.bar.style.cssText = `height:${Math.max(this.scrollRatio * 100, 10)}%; top:${(this.el.scrollTop / totalHeight) * 100}%;`;
             }
         });

@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
+  <meta charset="UTF-8">
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./images/sign.png">
 </head>
 
-<body>
-  <header>
+<body class="body">
+  <header class="header">
     <div class="wrapper">
       <div class="container p-0">
-        <div class="row m-lg-0 p-lg-0 d-flex justify-content-between">
-          <div class="col-12 col-lg d-flex justify-content-center justify-content-lg-start align-items-center p-0">
-            <img src="./images/sign.png" alt="logo">
+        <div class="row m-0 m-lg-0 p-lg-0 d-flex justify-content-between">
+          <a href="/" class="col-12 link col-lg d-flex justify-content-center justify-content-lg-start align-items-center p-0">
+            <img height="32" width="36" src="./images/sign.png" alt="logo">
             <span class="video-service">Видеосервис</span>
-          </div>
-          <div class="col col-lg m-lg-0 p-lg-0">
-            <form class="d-flex justify-content-center justify-content-lg-start">
+          </a>
+          <div class="col col-lg-6 m-2 m-lg-0 p-lg-0 p-0">
+            <form class="d-flex justify-content-center">
               <input class="input-search" type="text" placeholder="Поиск..." aria-label="Search">
               <button class="text-16 btn-search" type="submit">Найти</button>
             </form>
           </div>
           <div class="col col-lg d-flex justify-content-lg-end justify-content-center m-lg-0 m-2 p-0">
-            <input type="text" class="form-control-plaintext username display-none">
+            <input type="text" class="form-control-plaintext username d-none">
             <button id="open-modal" class="entry text-16">Войти</button>
           </div>
         </div>
@@ -34,22 +36,24 @@
     </div>
   </header>
 
-  <div class="main">
+  <main>
     <div class="wrapper">
-      <div class="tabs d-flex justify-content-center">
-        <div id="video" class="tab tab--active">
+      <section class="tabs d-flex justify-content-center">
+        <button class="tab tab--active px-0">
           Фильмы
-        </div>
-        <div id="tele" class="tab">
+        </button>
+        <button class="tab px-0">
           Телеканалы
-        </div>
-      </div>
-      <div class="content">
-        <div id="content-movies">
+        </button>
+      </section>
+      <section class="content">
+        <section class="content-item d-flex justify-content-center">
           <div class="container movies m-lg-0 p-0">
-            <div class="row title-category text-start">🔥 Новинки</div>
-            <div class="row mv-16 p-0 justify-content-between">
-              <div class="col-12 col-sm-6 col-lg p-0 mw280">
+            <a href="#" class="row link title-category justify-content-center justify-content-lg-start mx-md-2 mx-xl-0">
+              🔥 Новинки
+            </a>
+            <div class="row mv-16 p-0 justify-content-center justify-content-lg-between">
+              <div class="col-12 col-md-6 col-lg mx-md-2 mt-2 m-xl-0 p-0 mw280">
                 <div class="poster cat">
                   <div class="blackout">
                     <p class="review">
@@ -66,7 +70,7 @@
                   <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg p-0 mw280">
+              <div class="col-12 col-md-6 col-lg mx-md-2 mt-2 m-xl-0 p-0 mw280">
                 <div class="poster batmen">
                   <div class="blackout">
                     <p class="review">
@@ -80,7 +84,7 @@
                   <p>Новый Бэтмен</p>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg p-0 mw280">
+              <div class="col-12 col-md-6 col-lg mx-md-2 mt-2 m-xl-0 p-0 mw280">
                 <div class="poster hollywood">
                   <div class="blackout">
                     <p class="review">
@@ -94,7 +98,7 @@
                   <p>Однажды... в Голливуде</p>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg p-0 mw280">
+              <div class="col-12 col-md-6 col-lg mx-md-2 mt-2 m-xl-0 p-0 mw280">
                 <div class="poster striptease">
                   <div class="blackout">
                     <p class="review">
@@ -112,31 +116,33 @@
                 </div>
               </div>
             </div>
-            <div class="row title-category m-0 p-0 text-start">Жанры</div>
-            <div class="row mt-16 p-0 justify-content-between">
-              <div class="col-12 col-sm-6 col-lg genres comedy">
+            <a href="#" class="row link title-category m-0 p-0 justify-content-center justify-content-lg-start mx-md-2 mx-xl-0">
+              Жанры
+            </a>
+            <div class="row mt-16 p-0 justify-content-center justify-content-lg-between">
+              <div class="col-12 col-md-6 mx-md-2 mt-2 m-xl-0 col-lg genres comedy">
                 <p class="emoji">😁</p>
                 <p class="genres-text">Комедии</p>
               </div>
-              <div class="col-12 col-sm-6 col-lg genres dramas">
+              <div class="col-12 col-md-6 mx-md-2 mt-2 m-xl-0 col-lg genres dramas">
                 <p class="emoji">😭</p>
                 <p class="genres-text">Драмы</p>
               </div>
-              <div class="col-12 col-sm-6 col-lg genres fiction">
+              <div class="col-12 col-md-6 mx-md-2 mt-2 m-xl-0 col-lg genres fiction">
                 <p class="emoji">👽</p>
                 <p class="genres-text">Фантастика</p>
               </div>
-              <div class="col-12 col-sm-6 col-lg genres horrors">
+              <div class="col-12 col-md-6 mx-md-2 mt-2 m-xl-0 col-lg genres horrors">
                 <p class="emoji">👻</p>
                 <p class="genres-text">Ужасы</p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div id="content-television" class="display-none">
-          <div class="container scroller television m-0">
-            <div>
+        <section class="content-item d-none">
+          <div class="television m-0 p-0">
+            <div class="scrollbar">
               <div class="row channel m-0">
                 <div class="col-12 col-md-4 channel-icon">
                   <img src="./images/one.png" alt="one-tv">
@@ -239,35 +245,39 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </div>
-  </div>
+  </main>
 
-  <footer>
+  <footer class="footer">
     <div class="wrapper">
-      <div class="container m-0 p-0">
-        <div class="row m-0 p-0">
-          <div class="footer-img d-flex align-items-center">
-            <img src="./images/vector.png" alt="logo">
+      <div class="d-flex justify-content-around justify-content-lg-start">
+        <div class="m-2 mx-lg-0 d-flex align-items-center">
+          <img src="./images/vector.png" alt="logo">
+        </div>
+        <div class="footer-content">
+          <address class="address">
+            <a class="footer-address link" href="https://goo.gl/maps/XYzbyoX12SguLRhQA" target="_blank">
+              426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)
+            </a>
+          </address>
+          <div>
+            <a class="footer-address link" href="tel:+73412938861">+7 (3412) 93-88-61,</a>
+            <a class="footer-address link" href="tel:432929">43-29-29</a>
           </div>
-          <div class="col m-0 p-0">
-            <div class="row footer-text">
-              426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</div>
-            <div class="row">+7 (3412) 93-88-61, 43-29-29</div>
-            <div class="row"><a class="footer-link p-0 text-16" href="http://htc-cs.ru">htc-cs.ru</a></div>
-          </div>
+          <a class="footer-link link d-block text-16" target="_blank" href="http://htc-cs.ru">htc-cs.ru</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content modal-window">
+      <form class="modal-content modal-window">
         <div class="title">Вход</div>
         <input class="input-registration" id="login-field" type="text" placeholder="Логин" aria-label="Логин">
-        <input class="input-registration" type="password" placeholder="Пароль" aria-label="Пароль">
+        <input class="input-registration" id="password-field" type="password" placeholder="Пароль" aria-label="Пароль">
 
         <div class="checkbox custom-checkbox">
           <input type="checkbox" id="remember-checkbox">
@@ -275,9 +285,9 @@
         </div>
 
         <div class="btn-modal">
-          <button type="button" class="entry text-16">Войти</button>
+          <button class="entry text-16" type="submit">Войти</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </body>

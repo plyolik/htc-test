@@ -1,5 +1,6 @@
 .television {
   max-height: 696px;
+  overflow: hidden;
 
   p {
     margin: 15px 0;
@@ -43,36 +44,12 @@
   }
 }
 
-@media (min-width: 768px) {
-  .scroller {
-    width: 1196px;
-  }
+.scrollbar {
+  height: 696px;
 }
 
-.scroller {
-  overflow-y: scroll;
-  max-width: 1196px;
-  padding: 0 8px 0 0;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-    border-radius: 8px;
-    border: 8px solid rgba(255, 255, 255, 0);
-  }
-  
-  &::-webkit-scrollbar-track-piece {
-    background: #F2F2F2;
-    border-radius: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #F2F2F2;
-    border-radius: 8px;
-  }
-  
-  &::-webkit-scrollbar-thumb {
-    background: #BDBDBD;
-    border-radius: 2px;
-    border: 2px solid rgb(242,242,242);
+@media (min-width: 1200px) {
+  .television {
+    width: 1196px;
   }
 }

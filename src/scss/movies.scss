@@ -3,7 +3,6 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  text-align: right;
   color: #333333;
   margin: 5px 0 0 0px;
 }
@@ -88,17 +87,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-
-  p {
-    transition: all 0.3s ease-in-out;
-    margin-top: -15px;
-  }
 }
 
 .poster:hover .blackout {
   opacity: 1;
 
-  p {
+  .review {
     margin-top: 0;
   }
 }
@@ -112,6 +106,8 @@
   padding: 16px;
   position: absolute;
   top: 0;
+  transition: all 0.3s ease-in-out;
+  margin-top: -15px;
 }
 
 .hollywood {
@@ -142,5 +138,4 @@
 
 .mw280 {
   max-width: 280px;
-
 }

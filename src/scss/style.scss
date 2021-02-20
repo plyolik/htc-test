@@ -2,25 +2,29 @@
 @import "./movies.scss";
 @import "./television.scss";
 @import "./custom-checkbox.scss";
-
-body {
-  background-color: #ffffff;
-  font-family: "Rubik", sans-serif;
-}
-
-header {
-  margin: 32px auto;
-}
-
-footer {
-  background: #f2f2f2;
-  padding: 22px 0 25px 0;
-}
+@import "./scrollbar.scss";
 
 input,
 button {
   outline: none !important;
-  transition: 0.5s ease;
+}
+
+.address {
+  margin: 0;
+}
+
+.body {
+  background-color: #ffffff;
+  font-family: "Rubik", sans-serif;
+}
+
+.header {
+  margin: 32px auto;
+}
+
+.footer {
+  background: #f2f2f2;
+  padding: 22px 0 25px 0;
 }
 
 .display-none {
@@ -49,7 +53,7 @@ button {
   font-size: 20px;
   line-height: 24px;
   color: #333333;
-  margin-left: 7px;
+  margin-left: 11px;
 }
 
 .entry {
@@ -66,9 +70,11 @@ button {
   padding: 9px 0px 2px 0px;
   display: block;
   border: none;
-  width: 316px;
   border-bottom: 1px solid #333333;
   margin-right: 31px;
+  min-width: 100px;
+  max-width: 316px;
+  width: 100%;
 }
 
 .btn-search {
@@ -78,8 +84,19 @@ button {
   padding: 5px 0 0 0;
 }
 
+.link {
+  color: #333333;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #e5261e;
+  }
+}
+
 .footer {
-  &-text {
+  &-address {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -88,16 +105,13 @@ button {
     margin-bottom: 4px;
   }
 
-  &-link {
-    color: #1f4766;
-    text-decoration: none;
-    margin-top: 7px;
+  &-content {
+    margin-left: 39px;
   }
 
-  &-img {
-    width: 32px;
-    height: 64px;
-    padding: 14px 84px 3px 0;
+  &-link {
+    color: #1f4766;
+    margin-top: 7px;
   }
 }
 
@@ -110,10 +124,17 @@ button {
   padding-bottom: 7px;
   cursor: pointer;
   color: #333333;
+  border: none;
+  background: transparent;
+  transition: color 0.3s ease;
 
   &--active {
     color: #e5261e;
     border-bottom: 2px solid #e5261e;
+  }
+
+  &:hover {
+    color: #e5261e;
   }
 }
 
@@ -173,7 +194,14 @@ button {
   font-size: 16px;
   line-height: 19px;
   color: #333333;
-  padding-top: 11px;
-  padding-right: 17px;
   text-align: right;
+  min-width: 100px;
+  max-width: 350px;
+  padding: 7px 17px 0 0;
+}
+
+@media (min-width: 992px) {
+  .username {
+    padding: 7px 17px 0;
+  }
 }
